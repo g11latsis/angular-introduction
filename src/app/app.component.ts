@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
-  title = 'angular-introduction';
+  name = 'Grigoris Latsis';
+
+  person ={
+    givenName: 'Grigoris',
+    surName: "Latsis",
+    age: 31,
+    email:"glatsis@aueb.gr"
+  }
 }
