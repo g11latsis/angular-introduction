@@ -172,7 +172,7 @@
 <!-- Χωρίς δέσμευση στο επόμενο -->
 <app-person-table></app-person-table>
 <app-person-table [person]="person1"></app-person-table>
-  ```
+```
 
 ## Βήμα 4: @for Template Directive
  
