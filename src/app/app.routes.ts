@@ -7,6 +7,7 @@ import { SimpleDatatableExampleComponent } from './components/simple-datatable-e
 import { ComponentOutputExampleComponent } from './components/component-output-example/component-output-example.component';
 import { EpersonTemplateDrivenFormExampleComponent } from './components/eperson-template-driven-form-example/eperson-template-driven-form-example.component';
 import { EpersonReactiveFormExampleComponent } from './components/eperson-reactive-form-example/eperson-reactive-form-example.component';
+import { HttpClientExampleComponent } from './components/http-client-example/http-client-example.component';
 
 export const routes: Routes = [
     {path: 'event-bind-example', component:EventBindExampleComponent},
@@ -16,5 +17,6 @@ export const routes: Routes = [
     {path: 'simple-datatable-example', component:SimpleDatatableExampleComponent},
     {path: 'component-output-example', component:ComponentOutputExampleComponent},
     {path: 'template-driven-form', component: EpersonTemplateDrivenFormExampleComponent},
-    {path: 'reactive-form-example', component: EpersonReactiveFormExampleComponent}
+    {path: 'reactive-form-example', component: EpersonReactiveFormExampleComponent},
+    {path: 'http-client-example', component: HttpClientExampleComponent}
 ];
