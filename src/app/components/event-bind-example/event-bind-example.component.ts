@@ -5,27 +5,27 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './event-bind-example.component.html',
-  styleUrl: './event-bind-example.component.css'
+  styleUrl: './event-bind-example.component.css',
 })
 export class EventBindExampleComponent {
-  times: number = 0
+  times: number = 0;
 
-  userInput: string = ''
+  userInput: string = '';
 
-  incrementTimes(){
+  incrementTimes() {
     this.times++;
   }
 
-  decrementTimes(){
+  decrementTimes() {
     this.times--;
   }
 
-  resetTimes(){
+  resetTimes() {
     this.times = 0;
   }
 
-  onUserInput(event: Event){
+  onUserInput(event: Event) {
     const value = (event.target as HTMLInputElement).value;
-    this.userInput =value;
+    this.userInput = value;
   }
 }

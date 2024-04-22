@@ -5,28 +5,28 @@
       <mat-label> First Name </mat-label>
       <input matInput type="text" formControlName="givenName" />
       @if (form.get("givenName").invalid && form.get("givenName").touched) {
-        <mat-error>First Name is required</mat-error>
+        <mat-error> First Name is required </mat-error>
       }
     </mat-form-field>
     <mat-form-field>
       <mat-label> Last Name </mat-label>
       <input matInput type="text" formControlName="surName" />
       @if (form.get("surName").invalid && form.get("surName").touched) {
-        <mat-error>Last Name is required</mat-error>
+        <mat-error> Last Name is required </mat-error>
       }
     </mat-form-field>
     <mat-form-field>
       <mat-label> Age </mat-label>
       <input matInput type="text" formControlName="age" />
       @if (form.get("age").invalid && form.get("age").touched) {
-        <mat-error>Age is missing or invalid</mat-error>
+        <mat-error> Age is missing or invalid </mat-error>
       }
     </mat-form-field>
     <mat-form-field>
       <mat-label> Email </mat-label>
       <input matInput type="text" formControlName="email" />
       @if (form.get("email").invalid && form.get("email").touched) {
-        <mat-error>Email is required</mat-error>
+        <mat-error> Email is missing or invalid </mat-error>
       }
     </mat-form-field>
     <mat-form-field>
@@ -50,5 +50,7 @@
     color="primary"
     [disabled]="form.invalid"
     (click)="onSubmit(form.value)"
-  >Submit</button>
+  >
+    Submit
+  </button>
 </div>

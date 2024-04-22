@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { EpersonTemplateDrivenFormExampleComponent } from '../eperson-template-driven-form-example/eperson-template-driven-form-example.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -14,16 +13,15 @@ import { EPerson } from 'src/app/shared/interfaces/person';
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule,
     MatSelectModule,
+    MatButtonModule,
   ],
   templateUrl: './eperson-template-driven-form.component.html',
   styleUrl: './eperson-template-driven-form.component.css',
 })
 export class EpersonTemplateDrivenFormComponent {
-
   @Output() person = new EventEmitter<EPerson>();
-  onSUbmit(value: any) {
+  onSubmit(value: any) {
     console.log(value as EPerson);
     this.person.emit(value as EPerson);
   }

@@ -7,7 +7,7 @@ import { sortBy } from 'lodash-es';
   standalone: true,
   imports: [],
   templateUrl: './simple-datatable.component.html',
-  styleUrl: './simple-datatable.component.css'
+  styleUrl: './simple-datatable.component.css',
 })
 export class SimpleDatatableComponent {
   @Input() data: EPerson[];
@@ -15,23 +15,23 @@ export class SimpleDatatableComponent {
 
   sortOrder = {
     givenName: 'none',
-    surName:'none',
-    age:'none',
-    email:'none',
-    education:'none'
-  }
+    surName: 'none',
+    age: 'none',
+    email: 'none',
+    education: 'none',
+  };
 
-  sortData(sortKey: string){
-    if(this.sortOrder[sortKey] === 'asc'){
+  sortData(sortKey: string) {
+    if (this.sortOrder[sortKey] === 'asc') {
       this.sortOrder[sortKey] = 'desc';
       this.data = sortBy(this.data, sortKey).reverse();
-    }  else{
+    } else {
       this.sortOrder[sortKey] = 'asc';
       this.data = sortBy(this.data, sortKey);
     }
 
-    for(let key in this.sortOrder){
-      if(key !== sortKey){
+    for (let key in this.sortOrder) {
+      if (key !== sortKey) {
         this.sortOrder[key] = 'none';
       }
     }
@@ -47,8 +47,7 @@ export class SimpleDatatableComponent {
     }
   }
 
-  onPersonClicked(person: EPerson){
+  onPersonClicked(person: EPerson) {
     this.personClicked.emit(person);
   }
 }
-

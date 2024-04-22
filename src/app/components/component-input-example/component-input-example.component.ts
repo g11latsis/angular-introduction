@@ -7,23 +7,22 @@ import { PersonTableComponent } from '../person-table/person-table.component';
   standalone: true,
   imports: [PersonTableComponent],
   templateUrl: './component-input-example.component.html',
-  styleUrl: './component-input-example.component.css'
+  styleUrl: './component-input-example.component.css',
 })
 export class ComponentInputExampleComponent {
   person0: Person = {
-    givenName: 'Grigoris',
-    surName: 'Latsis',
-    age: 31,
-    email:'glatsis@aueb.gr',
-    address:'Athens, Greece'
+    givenName: 'Christodoulos',
+    surName: 'Fragkoudakis',
+    age: 0x37,
+    email: 'chfrag@aueb.gr',
+    address: 'Athens, Greece',
   };
 
-  person1 : Person = {
-    givenName: 'Matina',
-    surName: 'Poulaki',
-    age: 31,
-    email:'tina@aueb.gr',
-    address:'Leonidio, Greece'
+  person1: Person = {
+    givenName: 'John',
+    surName: 'Doe',
+    age: 0x25,
+    email: 'john@example.com',
+    address: 'New York, USA',
   };
-
 }

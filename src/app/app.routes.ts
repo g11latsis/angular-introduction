@@ -5,20 +5,53 @@ import { ComponentInputExampleComponent } from './components/component-input-exa
 import { ForDirectiveExampleComponent } from './components/for-directive-example/for-directive-example.component';
 import { SimpleDatatableExampleComponent } from './components/simple-datatable-example/simple-datatable-example.component';
 import { ComponentOutputExampleComponent } from './components/component-output-example/component-output-example.component';
-import { EpersonTemplateDrivenFormExampleComponent } from './components/eperson-template-driven-form-example/eperson-template-driven-form-example.component';
-import { EpersonReactiveFormExampleComponent } from './components/eperson-reactive-form-example/eperson-reactive-form-example.component';
+import { TemplateDrivenFormExampleComponent } from './components/template-driven-form-example/template-driven-form-example.component';
+import { ReactiveFormExampleComponent } from './components/reactive-form-example/reactive-form-example.component';
 import { HttpClientExampleComponent } from './components/http-client-example/http-client-example.component';
 import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
+import { RestrictedContentExampleComponent } from './components/restricted-content-example/restricted-content-example.component';
+import { authGuard } from './shared/guards/auth.guard';
+import { UserLoginComponent } from './components/user-login/user-login.component';
 
 export const routes: Routes = [
-    {path: 'event-bind-example', component:EventBindExampleComponent},
-    {path: 'component-input-example', component:ComponentInputExampleComponent},
-    {path: '', component:WelcomeComponent},
-    {path: 'for-directive-example', component:ForDirectiveExampleComponent},
-    {path: 'simple-datatable-example', component:SimpleDatatableExampleComponent},
-    {path: 'component-output-example', component:ComponentOutputExampleComponent},
-    {path: 'template-driven-form', component: EpersonTemplateDrivenFormExampleComponent},
-    {path: 'reactive-form-example', component: EpersonReactiveFormExampleComponent},
-    {path: 'http-client-example', component: HttpClientExampleComponent},
-    {path:'user-registration', component: UserRegistrationComponent}
+  {
+    path: 'component-input-example',
+    component: ComponentInputExampleComponent,
+  },
+  {
+    path: 'for-directive-example',
+    component: ForDirectiveExampleComponent,
+  },
+  { path: 'event-bind-example', component: EventBindExampleComponent },
+  {
+    path: 'simple-datatable-example',
+    component: SimpleDatatableExampleComponent,
+  },
+  {
+    path: 'component-output-example',
+    component: ComponentOutputExampleComponent,
+  },
+  {
+    path: 'template-driven-form-example',
+    component: TemplateDrivenFormExampleComponent,
+  },
+  {
+    path: 'reactive-form-example',
+    component: ReactiveFormExampleComponent,
+  },
+  {
+    path: 'http-client-example',
+    component: HttpClientExampleComponent,
+  },
+  {
+    path: 'user-registration-example',
+    component: UserRegistrationComponent,
+  },
+  {
+    path: 'restricted-content-example',
+    component: RestrictedContentExampleComponent,
+    canActivate: [authGuard],
+  },
+  { path: 'login', component: UserLoginComponent },
+  { path: '', component: WelcomeComponent },
 ];

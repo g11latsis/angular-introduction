@@ -1,7 +1,7 @@
 export interface DadJoke {
-    joke: string;
+  joke: string;
 }
 
 export interface ChuckNorrisJoke {
-    value: string;
+  value: string;
 }
