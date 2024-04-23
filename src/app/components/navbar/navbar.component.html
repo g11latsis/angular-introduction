@@ -9,25 +9,13 @@
   @if (user()) {
     <span class="me-3 d-flex gap-2 text-light">
       Welcome, {{ user().fullname }}
-<<<<<<< HEAD
       <mat-icon role="button" (click)="logout()">logout</mat-icon>
-=======
-      <mat-icon
-        role="button"
-        (click)="logout()">
-        logout
-      </mat-icon>
->>>>>>> c2b30c5d568092c4f9b15d183f364047fcd54a5f
     </span>
   } @else {
     <span class="text-light me-3 d-flex gap-2 align-items-center">
       Login
       <mat-icon
-<<<<<<< HEAD
         role="button"   
-=======
-        role="button"
->>>>>>> c2b30c5d568092c4f9b15d183f364047fcd54a5f
         class="icon-link-hover"
         routerLink="login">
         login

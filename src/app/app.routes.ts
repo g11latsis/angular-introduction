@@ -12,6 +12,7 @@ import { UserRegistrationComponent } from './components/user-registration/user-r
 import { RestrictedContentExampleComponent } from './components/restricted-content-example/restricted-content-example.component';
 import { authGuard } from './shared/guards/auth.guard';
 import { UserLoginComponent } from './components/user-login/user-login.component';
+import { CrudDashboardComponent } from './components/crud/crud-dashboard/crud-dashboard.component';
 
 export const routes: Routes = [
   {
@@ -54,4 +55,5 @@ export const routes: Routes = [
   },
   { path: 'login', component: UserLoginComponent },
   { path: '', component: WelcomeComponent },
+  {path:'crud-example', component: CrudDashboardComponent}
 ];

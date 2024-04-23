@@ -42,5 +42,6 @@ export class ListGroupMenuComponent {
       text: 'Restricted Content Example',
       routerLink: 'restricted-content-example',
     },
+    {text:'CRUD Example', routerLink: 'crud-example'}
   ];
 }
