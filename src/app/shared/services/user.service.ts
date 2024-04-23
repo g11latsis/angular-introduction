@@ -16,7 +16,6 @@ export class UserService {
 
   user = signal<LoggedInUser | null>(null);
 
-<<<<<<< HEAD
   constructor() { 
     const access_token = localStorage.getItem('access_token');
     if(access_token) {
@@ -24,16 +23,6 @@ export class UserService {
       this.user.set({
         fullname: decodedTokenSubject.fullname,
           email: decodedTokenSubject.email,
-=======
-  constructor() {
-    const access_token = localStorage.getItem('access_token');
-    if (access_token) {
-      const decodedTokenSubject = jwtDecode(access_token)
-        .sub as unknown as LoggedInUser;
-      this.user.set({
-        fullname: decodedTokenSubject.fullname,
-        email: decodedTokenSubject.email,
->>>>>>> c2b30c5d568092c4f9b15d183f364047fcd54a5f
       });
     }
 
@@ -64,14 +53,8 @@ export class UserService {
   }
 
   logoutUser() {
-<<<<<<< HEAD
     this.user.set(null) 
     localStorage.removeItem('access_token'); // remove token from local storage
     this.router.navigate(['/login']);
-=======
-    this.user.set(null);
-    localStorage.removeItem('access_token');
-    this.router.navigate(['login']);
->>>>>>> c2b30c5d568092c4f9b15d183f364047fcd54a5f
   }
 }
